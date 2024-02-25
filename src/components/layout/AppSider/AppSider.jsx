@@ -1,10 +1,7 @@
-import { Layout } from 'antd';
+import { Layout, Card } from 'antd';
 
 const siderStyle = {
-  textAlign: 'center',
-  lineHeight: '120px',
-  color: '#fff',
-  backgroundColor: '#1677ff',
+  padding: '1rem',
 };
 const AppSider = () => {
   return (
@@ -12,7 +9,7 @@ const AppSider = () => {
       width='25%'
       style={siderStyle}
     >
-      Sider
+      <Card></Card>
     </Layout.Sider>
   );
 };
