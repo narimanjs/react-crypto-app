@@ -72,7 +72,19 @@ const AppSider = () => {
             renderItem={item => (
               <List.Item>
                 <span>{item.title}</span>
-                {item.isPlain && <span>{item.value}</span>}
+                <span>
+                  {item.withTag && (
+                    <Tag color={asset.grow ? 'green' : 'red'}>
+                      {asset.growPersent}%
+                    </Tag>
+                  )}
+                  {item.isPlain && item.value}
+                  {!item.isPlain && (
+                    <Typography.Text type={asset.grow ? 'success' : 'danger'}>
+                      {item.value.toFixed(2)}$
+                    </Typography.Text>
+                  )}
+                </span>
               </List.Item>
             )}
           />
